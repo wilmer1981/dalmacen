@@ -1,0 +1,183 @@
+.img-thumbnail{
+
+	width:100px;
+
+	height:100px;
+
+}
+
+.page-header .botones {
+
+    padding: 0px 0px 2px 0px;
+
+    /*margin: 5px 0px 5px 0px;*/
+
+    border-bottom: 1px solid #f4f4f4;
+
+    border-top: 0px solid #ccc;
+
+}
+
+
+
+label {
+
+    display: inline-block;
+
+    max-width: 100%;
+
+    margin-bottom: 5px;
+
+    font-weight: 700;
+
+}
+
+
+
+div.required .control-label:not(span):before, td.required:before {
+
+    content: '* ';
+
+    color: #F00;
+
+    font-weight: bold;
+
+}
+
+
+
+.hidden{
+
+	display:none;
+
+}
+
+
+
+label.imagen {
+
+  cursor: pointer;
+
+  border: 0px solid #939393;
+
+  padding: 1px 6px;
+
+	width:150px;
+
+	height:150px;
+
+}	
+
+
+
+.image-upload > input
+
+{
+
+    display: none;
+
+}
+
+
+
+.image-upload img
+
+{
+
+    width:150px;
+
+	height:150px;
+
+    cursor: pointer;
+
+}
+
+
+
+.images-upload img {
+
+    width: 100px;
+
+    cursor: pointer;
+
+}
+
+
+
+.espacio-fila {
+
+    height:20px;
+
+    color: #FFF;
+
+    font-size: 14px;
+
+    line-height: 38px;
+
+    padding-left: 12px;
+
+    margin-bottom: 1px;
+
+}
+
+.tox-notification {display: none !important;}
+
+
+/* For other boilerplate styles, see: /docs/general-configuration-guide/boilerplate-content-css/ */
+/*
+* For rendering images inserted using the image plugin.
+* Includes image captions using the HTML5 figure element.
+*/
+
+figure.image {
+  display: inline-block;
+  border: 1px solid gray;
+  margin: 0 2px 0 1px;
+  background: #f5f2f0;
+}
+
+figure.align-left {
+  float: left;
+}
+
+figure.align-right {
+  float: right;
+}
+
+figure.image img {
+  margin: 8px 8px 0 8px;
+}
+
+figure.image figcaption {
+  margin: 6px 8px 6px 8px;
+  text-align: center;
+}
+
+
+/*
+ Alignment using classes rather than inline styles
+ check out the "formats" option
+*/
+
+img.align-left {
+  float: left;
+}
+
+img.align-right {
+  float: right;
+}
+
+/* Basic styles for Table of Contents plugin (toc) */
+.mce-toc {
+  border: 1px solid gray;
+}
+
+.mce-toc h2 {
+  margin: 4px;
+}
+
+.mce-toc li {
+  list-style-type: none;
+}
+
+
