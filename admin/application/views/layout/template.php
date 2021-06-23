@@ -16,7 +16,6 @@ $url_img = $this->session->userdata('imagen');
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
     <title>Dashboard - Ace Admin</title>
-
     <meta name="description" content="overview &amp; stats" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
@@ -105,8 +104,7 @@ $url_img = $this->session->userdata('imagen');
           </div>
         </div><!-- /.sidebar-shortcuts -->
 
-        <?php if(isset($menu)){ $this->load->view($menu); } ?>
-  
+        <?php if(isset($menu)){ $this->load->view($menu); } ?> 
 
         <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
           <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
