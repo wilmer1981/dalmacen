@@ -471,7 +471,7 @@ class Productos extends CI_Controller {
 	
 	public function updatecategory(){	
 		$id = $this->uri->segment(3);	
-   //echo $id;
+        //echo $id;
 
         $categoria     = $this->productos_model->get('wsoft_categorias','','id="'.$id.'"','',''); 
         $idpad         = $categoria[0]->id_categoria; 
@@ -479,8 +479,8 @@ class Productos extends CI_Controller {
          //$subcategoria = getSubcategoria($idpad);
             //var_dump($subcategoria);
         $categoriapad  = $this->productos_model->get('wsoft_categorias','','id="'.$idpad.'"','',''); 
-        $urlpad        = $categoriapad[0]->url; 
-       // var_dump($categoriapad);
+              
+       //var_dump($categoriapad);
 
         $this->load->library('form_validation');
         $this->data['custom_error'] = '';
@@ -494,12 +494,19 @@ class Productos extends CI_Controller {
 			$allowedTags.='<li><ol><ul><span><div><br><ins><del>';  
 			$Content     = strip_tags(stripslashes($this->input->post('txtDescripcion')),$allowedTags);		
 			$url         = urls_amigables($this->input->post('txtTitulo'));
+
+            if($categoriapad){
+                $urlpad        = $categoriapad[0]->url; 
+                $urls =    $urlpad.'-'.$url;
+            }else{
+                $urls =    $url;
+            }
 		  
 			$data = array(
                 'titulo' => $this->input->post('txtTitulo'),
                 'descripcion' => $Content,
 				'estado' => $this->input->post('rdoStatus'),
-				'url' => $urlpad.'-'.$url,
+				'url' => $urls,
                 'orden' => $this->input->post('txtOrden'),
 				'fech_act' => date('Y-m-d H:i:s')
             );
