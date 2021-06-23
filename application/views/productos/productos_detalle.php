@@ -6,7 +6,6 @@
 				// Create form and send values in 'shopping/add' function.
 				$price="1"; 
 				$message=""; 	
-
 			    if(!empty($producto[0]->precio_oferta)){
 		          $pfinal= $producto[0]->precio_oferta;
 		        }else{		    
@@ -109,6 +108,7 @@
 					</div>
 					<?php echo form_close(); ?>	
 				<div class="clearfix"> </div>			
+				<!--
 				<div class="cd-tabs is-ended">
 					<nav>
 						<ul class="cd-tabs-navigation">
@@ -167,6 +167,7 @@
 	                    <div class="clearfix"></div>
 		            </ul> 
 	            </div> 
+				-->
 			    <div class=" bottom-product">
 					<div class="col-md-4 bottom-cd simpleCart_shelfItem">
 						<div class="product-at ">
