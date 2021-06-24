@@ -1201,7 +1201,8 @@ height: 35px;
 
 
 /*--content-oferta--*/
-.content-oferta {
+.content-oferta,
+.content-similares {
 	text-align:center;
 	padding:2em 0 0 0;
 }
@@ -1209,7 +1210,6 @@ height: 35px;
 .content-cuenta {
   padding:2em 0;
 }
-
 
 /*--content-top--*/
 .content-top {

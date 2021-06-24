@@ -168,42 +168,48 @@
 		            </ul> 
 	            </div> 
 				-->
-			    <div class=" bottom-product">
-					<div class="col-md-4 bottom-cd simpleCart_shelfItem">
-						<div class="product-at ">
-							<a href="#"><img class="img-responsive" src="<?php echo base_url('assets/images/pi3.jpg'); ?>" alt="">
-							<div class="pro-grid">
-										<span class="buy-in">Buy Now</span>
-							</div>
-						</a>	
-						</div>
-						<p class="tun">It is a long established fact that a reader</p>
-						<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>						
+				<div class="content-similares">
+					<div class="section-header">
+							<h3>PRODUCTOS SIMILARES</h3>
 					</div>
-					<div class="col-md-4 bottom-cd simpleCart_shelfItem">
-						<div class="product-at ">
-							<a href="#"><img class="img-responsive" src="<?php echo base_url('assets/images/pi1.jpg'); ?>" alt="">
-							<div class="pro-grid">
-										<span class="buy-in">Buy Now</span>
+					<div class="divider"></div> 
+					<div class=" bottom-product">
+						<div class="col-md-4 bottom-cd simpleCart_shelfItem">
+							<div class="product-at ">
+								<a href="#"><img class="img-responsive" src="<?php echo base_url('assets/images/pi3.jpg'); ?>" alt="">
+								<div class="pro-grid">
+											<span class="buy-in">Buy Now</span>
+								</div>
+							</a>	
 							</div>
-						</a>	
+							<p class="tun">It is a long established fact that a reader</p>
+							<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>						
 						</div>
-						<p class="tun">It is a long established fact that a reader</p>
-	                   <a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>
-	                </div>
-					<div class="col-md-4 bottom-cd simpleCart_shelfItem">
-						<div class="product-at ">
-							<a href="#"><img class="img-responsive" src="<?php echo base_url('assets/images/pi4.jpg'); ?>" alt="">
-							<div class="pro-grid">
-										<span class="buy-in">Buy Now</span>
+						<div class="col-md-4 bottom-cd simpleCart_shelfItem">
+							<div class="product-at ">
+								<a href="#"><img class="img-responsive" src="<?php echo base_url('assets/images/pi1.jpg'); ?>" alt="">
+								<div class="pro-grid">
+											<span class="buy-in">Buy Now</span>
+								</div>
+							</a>	
 							</div>
-						</a>	
+							<p class="tun">It is a long established fact that a reader</p>
+						<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>
 						</div>
-						<p class="tun">It is a long established fact that a reader</p>
-	                <a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>					
-	                </div>
-					<div class="clearfix"> </div>
-			    </div>
+						<div class="col-md-4 bottom-cd simpleCart_shelfItem">
+							<div class="product-at ">
+								<a href="#"><img class="img-responsive" src="<?php echo base_url('assets/images/pi4.jpg'); ?>" alt="">
+								<div class="pro-grid">
+											<span class="buy-in">Buy Now</span>
+								</div>
+							</a>	
+							</div>
+							<p class="tun">It is a long established fact that a reader</p>
+						<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>					
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
             </div>
 
 		<div class="clearfix"> </div>
