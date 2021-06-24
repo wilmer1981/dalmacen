@@ -88,12 +88,11 @@
 				<div class="col-md-6 men">
 					<a href="<?php echo base_url('productos/catalogo/tecnologia-computacion-laptops'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/t1.jpg') ?>" alt="">
 						<div class="b-wrapper">
-											<h3 class="b-animate b-from-top top-in   b-delay03 ">
-												<span>Laptops</span>	
-											</h3>
-										</div>
-					</a>
-					
+							<h3 class="b-animate b-from-top top-in   b-delay03 ">
+								<span>Laptops</span>	
+							</h3>
+						</div>
+					</a>			
 					
 				</div>
 				<div class="col-md-6">
