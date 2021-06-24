@@ -86,10 +86,10 @@
     		<div class="section-header"><h3>COLECCIONES DESTACADAS</h3></div>
 			<div class="collection">
 				<div class="col-md-6 men">
-					<a href="<?php base_url('productos/catalogo/tecnologia-computacion-laptops'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/t1.jpg') ?>" alt="">
+					<a href="<?php echo base_url('productos/catalogo/tecnologia-computacion-laptops'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/t1.jpg') ?>" alt="">
 						<div class="b-wrapper">
 											<h3 class="b-animate b-from-top top-in   b-delay03 ">
-												<span>Lorem</span>	
+												<span>Laptops</span>	
 											</h3>
 										</div>
 					</a>
