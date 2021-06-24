@@ -35,6 +35,7 @@
         $precio   = $o->precio;
         $poferta  = $o->precio_oferta;
         $link     = $idprod."-".$producto;
+        $imagen   = $o->url_imagen; 
         //$url      = urls_amigables($link);
         $url      = $idprod."-".$o->url;
         $images   = getProductImages($idprod);
@@ -50,8 +51,8 @@
                             $image=$img;
                             $image='<img src="'.base_url('admin/'.$image).'" class="img-responsive"  />';
                           }else{
-                            $image='assets/images/no_image.png';
-                            $image='<img src="'.base_url($image).'" class="img-responsive" width="307" height="240"  />';
+                            $image=$imagen;
+                            $image='<img src="'.base_url('admin/'.$image).'" class="img-responsive"  />';
                           }     
               
                           echo $image; 
