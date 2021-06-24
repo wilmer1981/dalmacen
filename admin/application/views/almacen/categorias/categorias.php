@@ -42,22 +42,23 @@
 -->		
 			<div>
             <table id="categoryproducts" class="table table-bordered table-striped" role="grid">
-                            <thead>
-                                <tr>
-                                        <th class="text-center">
-										  <label class="pos-rel">
-											<input type="checkbox" class="ace">
-											<span class="lbl"></span>
-										  </label>
-									</th>
-                                    <th>Categoria</th>  
-                                    <th>Publicados</th>  
-                                    <th>Despublicados</th>  									
-                                    <th>Estado</th>
-                                    <th>Acción</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+              <thead>
+                  <tr>
+                      <th class="text-center">
+                          <label class="pos-rel">
+                          <input type="checkbox" class="ace">
+                          <span class="lbl"></span>
+                          </label>
+                      </th>
+                      <th>Categoria</th>  
+                      <th>Publicados</th>  
+                      <th>Despublicados</th> 
+                      <th>Orden</th>  									
+                      <th>Estado</th>
+                      <th>Acción</th>
+                  </tr>
+              </thead>
+              <tbody>
                                 <?php foreach ($categorias as $r) {   
 
                                  if($r->estado==1){
@@ -77,8 +78,8 @@
                                     echo '<td><a href="'.base_url('productos/categorias/'.$r->id).'" title="Ver Subcategorias">'.$r->titulo.'</a></td>';  
                                     echo '<td><span class="badge">'.$count[0]->publicados.'</span></td>';                        
                                     echo '<td><span class="badge">'.$count[0]->despublicados.'</span></td>';                        
-                                   
-									echo '<td>'.$estado.'</td>';
+                                    echo '<td>'.$r->orden.'</td>';
+									                  echo '<td>'.$estado.'</td>';
                                     echo '<td>';
                                    
                                   if($this->permission->checkPermission($this->session->userdata('permiso'),'vCategoria')){
