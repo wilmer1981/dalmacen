@@ -1201,10 +1201,14 @@ height: 35px;
 
 
 /*--content-oferta--*/
-.content-oferta,
+.content-oferta{
+	text-align:center;
+	padding:2em 0 0 0;
+}
 .content-similares {
 	text-align:center;
 	padding:2em 0 0 0;
+  margin-top: 4em;
 }
 
 .content-cuenta {
@@ -1217,8 +1221,8 @@ height: 35px;
 	padding:2em 0;
 }
 .content-top h1{
-	color:#000;
-	font-size: 2.2em;
+	  color:#000;
+	  font-size: 2.2em;
   	font-family: 'Lato', sans-serif;
   	font-weight: 600;
     margin-bottom: 0.5em;
