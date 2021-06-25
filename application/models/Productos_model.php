@@ -525,9 +525,9 @@ class Productos_model extends CI_Model {
 	public function sp_getProducto($where='',$one=false,$array='array'){	
         //$data=array();     
 	  	//$this->db->select('p.*, c.titulo as categoria, m.titulo as marca,o.opcion,o.opciones');
-	  	$this->db->select('p.*,d.precio as precio_oferta,  IF(d.estado = "1", 1,0) as oferta',FALSE);
+	  	$this->db->select('p.*,c.titulo as categoria, d.precio as precio_oferta,  IF(d.estado = "1", 1,0) as oferta',FALSE);
         $this->db->from('wsoft_productos p');
-        //$this->db->join('wsoft_categorias c', 'c.id = p.id_subcategoria', 'inner');
+        $this->db->join('wsoft_categorias c', 'c.id = p.id_subcategoria', 'inner');
 		$this->db->join('wsoft_productos_images i', 'i.id_producto = p.id', 'left');
 		$this->db->join('wsoft_productos_descuentos d', 'd.id_producto = p.id', 'left');
 		$this->db->join('wsoft_productos_opciones o', 'o.id_producto = p.id', 'left');

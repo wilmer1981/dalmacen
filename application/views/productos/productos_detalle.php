@@ -107,7 +107,7 @@
 						   </div>
 							<ul class="tag-men">
 								<li><span>TAG</span>
-								<span class="women1">: Women,</span></li>
+								<span class="women1">: <?php  echo $producto[0]->categoria;  ?></span></li>
 								<li><span>SKU</span>
 								<span class="women1">: <?php  echo $producto[0]->codigo;  ?></span></li>
 							</ul>
