@@ -187,7 +187,7 @@ class Productos extends CI_Controller {
 		//var_dump($this->data['subcategorias']); 
 		$where='p.id="'.$idprod.'"'; 
 		$this->data['producto']   = $this->productos_model->sp_getProducto($where);	
-		var_dump($this->data['producto']);  
+		//var_dump($this->data['producto']);  
 		$this->data['marcas']     	   = $this->marcas_model->sp_getMarcasAll();	
 		$this->data['modelos']    	   = $this->modelos_model->sp_getModelosAll();	
 		$this->data['features']    	   = $this->productos_model->sp_getProductsFeatures();	
