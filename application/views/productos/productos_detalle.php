@@ -2,7 +2,7 @@
 <!--content-->
 <div class="product">
 		<div class="container">
-				 <?php                        
+				 <?php                    
 				// Create form and send values in 'shopping/add' function.
 				$price="1"; 
 				$message=""; 	
@@ -29,12 +29,22 @@
 				<div class="col-md-7 single-top">				
 					<div class="flexslider" style="direction:ltr">
 					    <ul class="slides">
-					    <?php foreach($images as $p){	
-					        $id       = $p->id;  
-					        $img      = $p->url_imagen;  
-					        $image   ='admin/'.$img;
-					        echo '<li data-thumb="'.base_url($image).'"><img src="'.base_url($image).'"></li>';
-						} ?>
+					    <?php 
+						$idprod = $producto[0]->id;
+						$images = getProductImages($idprod);
+						if($images){						
+							foreach($images as $i){	
+								$id       = $i->id;  
+								$img      = $i->url_imagen;  
+								$image   ='admin/'.$img;
+								echo '<li data-thumb="'.base_url($image).'"><img src="'.base_url($image).'"></li>';
+							}
+						}else{
+							$img = $producto[0]->url_imagen;
+							$image   ='admin/'.$img;
+							echo '<li data-thumb="'.base_url($image).'"><img src="'.base_url($image).'"></li>';
+						}						
+						?>
 					    </ul>
 					</div>
 				</div>	
@@ -70,21 +80,28 @@
 							<p><?php echo $producto[0]->descripcion; ?></p>
 							<div class="available">
 								<ul>
+									<!--
 									<li>Color
 										<select>
 										<option>Silver</option>
 										<option>Black</option>
 										<option>Dark Black</option>
 										<option>Red</option>
-									</select></li>
-								<li class="size-in">Size<select>
+									</select>
+									</li>
+									-->
+								<?php if($producto[0]->id_categoria==3 || $producto[0]->id_categoria==4){ ?>
+								<li class="size-in">Talla<select>
 									<option>Large</option>
 									<option>Medium</option>
 									<option>small</option>
 									<option>Large</option>
 									<option>small</option>
-								</select></li>
-								<li class="size-in">Cantidad<input type="number" class="text_box" id="quantity" name="quantity" value="1" min="1" />	</li>
+									</select>
+								</li>
+								<?php } ?>
+								<li class="size-in">Cantidad<input type="number" class="text_box" id="quantity" name="quantity" value="1" min="1" /></li>
+
 								<div class="clearfix"> </div>
 							</ul>
 						   </div>
@@ -92,7 +109,7 @@
 								<li><span>TAG</span>
 								<span class="women1">: Women,</span></li>
 								<li><span>SKU</span>
-								<span class="women1">: CK09</span></li>
+								<span class="women1">: <?php  echo $producto[0]->codigo;  ?></span></li>
 							</ul>
 							<?php
 								$btn = array(

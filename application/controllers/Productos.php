@@ -173,30 +173,21 @@ class Productos extends CI_Controller {
 
 	public function preview(){	
 		$url       =  $this->uri->segment(2); 	
-		//echo $url;
-		 $data   = explode("-", $url);
-		 $idprod = $data[0];
+    	$data   = explode("-", $url);
+		$idprod = $data[0];
 
 		$this->data['site']				= $this->contenidos_model->sp_getSiteOffline();
-		$limit=8;
 		$this->data['estados']			= $this->estados_model->get_estados();
 		
 		$this->data['menus']			= $this->menus_model->sp_getMenus();
-		$this->data['submenus']			= $this->menus_model->sp_getSubMenus();
-			
+		$this->data['submenus']			= $this->menus_model->sp_getSubMenus();			
 		$this->data['categorias']       = $this->productos_model->sp_getCategorias();
 		$this->data['subcategorias']	= $this->productos_model->sp_getSubCategorias();	
 		//var_dump($data['categorias']);
 		//var_dump($this->data['subcategorias']); 
-		//$where='p.url="'.$url.'"';  
-		$where='p.id="'.$idprod.'"';  
-
+		$where='p.id="'.$idprod.'"'; 
 		$this->data['producto']   = $this->productos_model->sp_getProducto($where);	
-
-    	$this->data['images']     = $this->productos_model->sp_getProductoImages($where);
-    	//var_dump($this->data['producto']);   
-
-		$this->data['categoriaslimit'] = $this->productos_model->sp_getCategoriasLimit($limit);		
+		//var_dump($this->data['producto']);  
 		$this->data['marcas']     	   = $this->marcas_model->sp_getMarcasAll();	
 		$this->data['modelos']    	   = $this->modelos_model->sp_getModelosAll();	
 		$this->data['features']    	   = $this->productos_model->sp_getProductsFeatures();	
@@ -214,63 +205,8 @@ class Productos extends CI_Controller {
 		$this->data['featuresmod']	= 'home/features';	
 		$this->data['latestsmod']	= 'home/latest';	
        
-        $this->load->view('layout/layout',  $this->data);	
-		
-		
+        $this->load->view('layout/layout', $this->data);		
     }
-
-    public function previewww(){	
-		$url        =  $this->uri->segment(3);      
-    	$array 		= explode("-", $url);
-    	$idprod     =  $array[0];  
-		
-		$this->data['titulo']= $url;  		
-		$limit	=	2;
-
-    	//$this->data['breadcrumb']      = $this->maquinas_model->sp_getBreadcrumbs($idprod,'producto');
-		
-		$this->data['site']       = $this->contenidos_model->sp_getSiteOffline();
-        $this->data['breadcrumb']      = $this->maquinas_model->sp_getBreadcrumbs($idprod,'productos');
-
-		$this->data['menus']			= $this->menus_model->sp_getMenus();
-		$this->data['submenus']			= $this->menus_model->sp_getSubMenus();	
-		
-		$this->data['categorias']      = $this->maquinas_model->sp_getCategorias();
-		$this->data['subcategorias']   = $this->maquinas_model->sp_getSubCategorias();	
-		//$this->data['categoriaslimit'] = $this->maquinas_model->sp_getCategoriasLimit($limit);		
-		$this->data['marcas']     	 = $this->marcas_model->sp_getMarcasAll();	
-		$this->data['modelos']    	 = $this->modelos_model->sp_getModelosAll();	
-		
-		//$this->data['features']    	 = $this->productos_model->sp_getProductsFeatures($limit);	
-		//$this->data['promotions']    	 = $this->productos_model->sp_getProductsPromotions();	
-		
-    	$this->data['producto']   = $this->productos_model->sp_getProducto($idprod);	
-    	$this->data['images']     = $this->productos_model->sp_getProductoImages($idprod);
-        //$this->data['filesprod']   = $this->productos_model->sp_getProductosFile('producto',$idprod);	
-				
-       //var_dump($this->data['producto']);	   
-    	//var_dump($this->data['producto']);		
-		$this->data['features']    	 = $this->productos_model->sp_getProductsFeatures();
-        $this->data['latests']    	 = $this->productos_model->sp_getProductsLatest();		
-		$this->data['banners']    	 = $this->contenidos_model->sp_getBanners();
-		
-		$this->data['breadcrumbs']  = 'home/breadcrumbs';
-		
-		$this->data['menusup']   	= 'home/menu-superior';		
-		$this->data['header'] 	= 'home/header';
-		$this->data['slider'] 	= 'home/slider';
-		$this->data['catmenu']  = 'home/menu-acordeon';       
-		$this->data['view']   	= 'productos/productos_detalle';	
-        $this->data['footer'] 	= 'home/footer'; 
-		$this->data['featuresmod']= 'home/features';	
-		$this->data['latestsmod']= 'home/latest';	
-		
-        $this->load->view('layout/layout',  $this->data);	
-		
-		
-    }
-	
-	
 
     public function subcategoria(){
 		//$id = $this->input->post('id');

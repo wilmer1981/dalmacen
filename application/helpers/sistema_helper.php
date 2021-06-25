@@ -555,7 +555,7 @@ if (!function_exists('getSubcategoria'))
     }
 }
 
-//consultar Usuario supervisor
+//mostrar imagenes de producto
 if (!function_exists('getProductImages'))
 {
     function getProductImages($idproducto,$one=false,$array='array')
@@ -565,7 +565,7 @@ if (!function_exists('getProductImages'))
         //al ser instanciado es el equivalente a $this que se tiene en control
         //el siguiente proceso facil de entender igual no va al caso    
        $where="i.id_producto = ".$idproducto;
-        $CI->db->select('i.url_imagen,i.estado');
+        $CI->db->select('i.id,i.url_imagen,i.estado');
         $CI->db->from('wsoft_productos_images i'); 
         $CI->db->order_by('i.sort_order', 'asc');  
 
