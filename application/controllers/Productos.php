@@ -192,8 +192,8 @@ class Productos extends CI_Controller {
 		$this->data['modelos']    	   = $this->modelos_model->sp_getModelosAll();	
 		$this->data['features']    	   = $this->productos_model->sp_getProductsFeatures();	
 		$this->data['banners']    	   = $this->contenidos_model->sp_getBanners();	
-		$this->data['latests']    	   = $this->productos_model->sp_getProductsLatest();		
-	
+		$this->data['latests']    	   = $this->productos_model->sp_getProductsLatest();
+
 		$this->data['menusup']   	= 'home/menu-superior';		
 		$this->data['menucat']   	= 'home/menu-categorias';
 		$this->data['breadcrumbs']  = 'home/breadcrumbs';

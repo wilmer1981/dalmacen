@@ -191,39 +191,36 @@
 					</div>
 					<div class="divider"></div> 
 					<div class=" bottom-product">
-						<div class="col-md-4 bottom-cd simpleCart_shelfItem">
+					<?php    
+					$idprod   = $producto[0]->id;
+					$idsubcat = $producto[0]->id_subcategoria;
+					$similares =   getProductSimilar($idprod,$idsubcat);    
+					//var_dump($similares);         
+      				foreach($similares as $s){ 
+						$idprod   = $s->id;      
+						$producto = $s->nombre;
+						$precio   = $s->precio;
+						$poferta  = $s->precio_oferta;
+						$link     = $idprod."-".$producto;
+						$imagen   = $s->url_imagen; 
+						$url      = $idprod."-".$s->url;
+	  				
+						echo '<div class="col-md-4 bottom-cd simpleCart_shelfItem">
 							<div class="product-at ">
-								<a href="#"><img class="img-responsive" src="<?php echo base_url('assets/images/pi3.jpg'); ?>" alt="">
+								<a href="'.base_url('producto/'.$url).'"><img class="img-responsive" src="'. base_url('admin/'.$imagen).'" alt="">
 								<div class="pro-grid">
-											<span class="buy-in">Buy Now</span>
+											<span class="buy-in">Compra Ahora</span>
 								</div>
 							</a>	
 							</div>
-							<p class="tun">It is a long established fact that a reader</p>
-							<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>						
-						</div>
-						<div class="col-md-4 bottom-cd simpleCart_shelfItem">
-							<div class="product-at ">
-								<a href="#"><img class="img-responsive" src="<?php echo base_url('assets/images/pi1.jpg'); ?>" alt="">
-								<div class="pro-grid">
-											<span class="buy-in">Buy Now</span>
-								</div>
-							</a>	
-							</div>
-							<p class="tun">It is a long established fact that a reader</p>
-						<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>
-						</div>
-						<div class="col-md-4 bottom-cd simpleCart_shelfItem">
-							<div class="product-at ">
-								<a href="#"><img class="img-responsive" src="<?php echo base_url('assets/images/pi4.jpg'); ?>" alt="">
-								<div class="pro-grid">
-											<span class="buy-in">Buy Now</span>
-								</div>
-							</a>	
-							</div>
-							<p class="tun">It is a long established fact that a reader</p>
-						<a href="#" class="item_add"><p class="number item_price"><i> </i>$500.00</p></a>					
-						</div>
+							<p class="tun">'.$producto.'</p>
+							<a href="'.base_url('producto/'.$url).'" class="item_add"><p class="number item_price"><i> </i> S/ '.$precio.'</p></a>						
+						</div>';
+
+					}
+					?>
+
+
 						<div class="clearfix"> </div>
 					</div>
 				</div>

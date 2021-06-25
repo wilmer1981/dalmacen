@@ -568,7 +568,7 @@ if (!function_exists('getProductImages'))
         $CI->db->select('i.id,i.url_imagen,i.estado');
         $CI->db->from('wsoft_productos_images i'); 
         $CI->db->order_by('i.sort_order', 'asc');  
-
+    
         if($where){
             $CI->db->where($where);
         }  
@@ -577,6 +577,36 @@ if (!function_exists('getProductImages'))
         
         $result =  !$one  ? $query->result() : $query->row();
         return $result;
+    }
+}
+
+if (!function_exists('getProductSimilar'))
+{
+    function getProductSimilar($idprod,$idsubcategoria,$one=false,$array='array'){	
+    //$data=array();     
+      //$this->db->select('p.*, c.titulo as categoria, m.titulo as marca,o.opcion,o.opciones');
+      $CI= & get_instance(); 
+     
+      $where = array('p.id !=' => $idprod, 'p.id_subcategoria =' => $idsubcategoria);
+      
+      $CI->db->select('p.*,c.titulo as categoria, d.precio as precio_oferta,  IF(d.estado = "1", 1,0) as oferta',FALSE);
+      $CI->db->from('wsoft_productos p');
+      $CI->db->join('wsoft_categorias c', 'c.id = p.id_subcategoria', 'inner');
+      $CI->db->join('wsoft_productos_descuentos d', 'd.id_producto = p.id', 'left');
+      $CI->db->join('wsoft_productos_opciones o', 'o.id_producto = p.id', 'left');
+      $CI->db->join('wsoft_marcas m', 'm.id = p.id_marca', 'left');
+      $CI->db->group_by('p.id'); 
+        $CI->db->limit(3);
+        $CI->db->order_by('p.id', 'random'); 
+   
+
+        if($where){
+            $CI->db->where($where);
+        }        
+        $query = $CI->db->get();
+    
+    $result =  !$one  ? $query->result() : $query->row();
+    return $result; 
     }
 }
 
