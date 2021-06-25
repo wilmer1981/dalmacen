@@ -62,12 +62,12 @@
                       </div>';*/
                   echo '<div class="w3_hs_bottom">
                           <div class="flex_ecommerce">
-                            <a href="'.base_url('productos/preview/'.$url).'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                            <a href="'.base_url('producto/'.$url).'"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
                           </div>
                         </div>';
                 echo '</div>';//wrapper
 
-                echo '<h5><a href="'.base_url('productos/preview/'.$url).'">'.$producto.'</a></h5>';
+                echo '<h5><a href="'.base_url('producto/'.$url).'">'.$producto.'</a></h5>';
                 echo '<div class="simpleCart_shelfItem">';
                   echo '<p class="flexisel_ecommerce_cart"><span> S/ '.$precio.'</span><i class="item_price"> S/ '.$poferta.'</i></p>';
                   //echo '<p class="number"><i> </i><a class="item_add" href="#">Add to cart</a></p>';

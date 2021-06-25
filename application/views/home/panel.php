@@ -12,24 +12,24 @@
 			<div class="divider"></div>	
 			<div class="grid-in">
 				<div class="col-md-4 grid-top">
-					<a href="<?php echo base_url('productos/catalogo/ropa'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/pi01.jpg'); ?>" alt="">
+					<a href="<?php echo base_url('productos/ropa'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/pi01.jpg'); ?>" alt="">
 							<div class="b-wrapper">
 										<h3 class="b-animate b-from-left    b-delay03 ">
 											<span>Ver productos</span>	
 										</h3>
 							</div>
 					</a>
-				<p><a href="<?php echo base_url('productos/catalogo/ropa'); ?>">Ropa</a></p>
+				<p><a href="<?php echo base_url('productos/ropa'); ?>">Ropa</a></p>
 				</div>
 				<div class="col-md-4 grid-top">
-						<a href="<?php echo base_url('productos/catalogo/calzados'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/pi02.jpg') ?>" alt="">
+						<a href="<?php echo base_url('productos/calzados'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/pi02.jpg') ?>" alt="">
 							<div class="b-wrapper">
 											<h3 class="b-animate b-from-left    b-delay03 ">
 												<span>Ver productos</span>	
 											</h3>
 										</div>
 						</a>
-					<p><a href="<?php echo base_url('productos/catalogo/calzados'); ?>">Zapatillas</a></p>
+					<p><a href="<?php echo base_url('productos/calzados'); ?>">Zapatillas</a></p>
 				</div>
 				<div class="col-md-4 grid-top">
 						<a href="<?php echo base_url('productos/tecnologia-celulares-y-tablets'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/pi03.jpg') ?>" alt="">
@@ -39,7 +39,7 @@
 											</h3>
 										</div>
 						</a>
-					<p><a href="<?php echo base_url('productos/catalogo/tecnologia-celulares-y-tablets'); ?>">Celulares y Tablets</a></p>
+					<p><a href="<?php echo base_url('productos/tecnologia-celulares-y-tablets'); ?>">Celulares y Tablets</a></p>
 				</div>
 						<div class="clearfix"> </div>
 			</div>
@@ -86,7 +86,7 @@
     		<div class="section-header"><h3>COLECCIONES DESTACADAS</h3></div>
 			<div class="collection">
 				<div class="col-md-6 men">
-					<a href="<?php echo base_url('productos/catalogo/tecnologia-computacion-laptops'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/t1.jpg') ?>" alt="">
+					<a href="<?php echo base_url('productos/tecnologia-computacion-laptops'); ?>" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="<?php echo base_url('assets/images/t1.jpg') ?>" alt="">
 						<div class="b-wrapper">
 							<h3 class="b-animate b-from-top top-in   b-delay03 ">
 								<span>Laptops</span>	

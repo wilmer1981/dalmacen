@@ -43,17 +43,17 @@ class Productos extends CI_Controller {
     }
 
     public function catalogo(){
-
-    	$url       =  $this->uri->segment(3); 
+    	$url       =  $this->uri->segment(2);
+		//echo "URL : ".$url."<br>"; 
 
     	$categoria = $this->generales_model->get('wsoft_categorias','','url="'.$url.'"','','');
-		var_dump($categoria);
+		//var_dump($categoria);
 
 		if(!empty($categoria)){			
 			$id                  = $categoria[0]->id; //24
 			$idpad               = $categoria[0]->id_categoria;//5
 
-		   echo "<br>categoria(id):".$id;	
+		   //echo "<br>categoria(id):".$id;	
            if($idpad !=0){
 				$categoria1 = getSubcategoria($id);//consultamos si tiene subcatehgoria
 				if(!empty($categoria1)){	
@@ -70,10 +70,8 @@ class Productos extends CI_Controller {
 			$this->data['titulo']=$url;
 		}
 
-
-
-		echo "<br>categoria(id):".$id;	
-		echo "<br>categoria padre(idpad):".$idpad;				
+		//echo "<br>categoria(id):".$id;	
+		//echo "<br>categoria padre(idpad):".$idpad;				
 		
 		if($idpad == 0){ //categoria padre
 			$opcion= "categoria";
@@ -81,7 +79,8 @@ class Productos extends CI_Controller {
 			$opcion= "subcategoria";
 		}
 
-		$config['base_url']   = base_url().'productos/catalogo/'.$url.'/';
+		//$config['base_url']   = base_url().'productos/catalogo/'.$url.'/';
+		$config['base_url']   = base_url().'productos/'.$url.'/';
 		//echo "<br>Opcon: ".$opcion;
 		//echo "<br>ID: ".$id;
 
@@ -90,8 +89,8 @@ class Productos extends CI_Controller {
 		//echo "<br>Total: ".$total_records."<br>";
 		$config['total_rows'] = $total_records;
         $config['per_page']   = 6;
-		if($this->uri->segment(4)){
-			$config['per_star'] = $this->uri->segment(4);
+		if($this->uri->segment(3)){
+			$config['per_star'] = $this->uri->segment(3);
 		}else{
 			$config['per_star'] = 0;
 		}
@@ -173,7 +172,7 @@ class Productos extends CI_Controller {
     }
 
 	public function preview(){	
-		$url       =  $this->uri->segment(3); 	
+		$url       =  $this->uri->segment(2); 	
 		//echo $url;
 		 $data   = explode("-", $url);
 		 $idprod = $data[0];
@@ -220,7 +219,7 @@ class Productos extends CI_Controller {
 		
     }
 
-    	public function previewww(){	
+    public function previewww(){	
 		$url        =  $this->uri->segment(3);      
     	$array 		= explode("-", $url);
     	$idprod     =  $array[0];  

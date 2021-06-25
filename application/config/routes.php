@@ -55,6 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
+
 //$route['translate_uri_dashes'] = FALSE;
 // para controlador con guiones
 $route['translate_uri_dashes'] = TRUE;
@@ -64,10 +65,15 @@ $route['translate_uri_dashes'] = TRUE;
 $route['user/get_users/pagina/(:num)'] = 'user/get_users';//cuando no sea la primera página
 $route['user/get_users/pagina'] = 'user/get_users';//cuando sea la primera página
 
-$route['catalogo/productos/pagina/(:num)'] = 'catalogo/productos';//cuando no sea la primera página
+$route['catalogo/productos/pagina/(:num)'] = 'catalogo/productos/$1';//cuando no sea la primera página
 $route['catalogo/productos/pagina'] = 'catalogo/productos';//cuando sea la primera página
 
-$route['productos/(:num)'] = 'productos';//cuando no sea la primera página
-$route['productos'] = 'productos';//cuando sea la primera página
+
+//$route['productos']        = 'productos';//cuando sea la primera página
+//$route['productos/(:num)'] = 'productos/$1';//cuando no sea la primera página
+
+
+$route['productos/(:any)'] = "productos/catalogo/$1";
+$route['producto/(:any)'] = "productos/preview/$1";
 
 $route['notifications'] = 'shopping/notificacionesMercadoPago';

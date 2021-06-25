@@ -46,7 +46,7 @@
 						<div class="col-md-4 bottom-cd simpleCart_shelfItem">
 							<?php
 							echo '<div class="product-at ">';
-							echo '<a href="'.base_url().'productos/preview/'.$url1.'"><img class="img-responsive" src="'.base_url($image).'" alt="" /><div class="pro-grid"><span class="buy-in">Compra ahora</span></div>
+							echo '<a href="'.base_url().'producto/'.$url1.'"><img class="img-responsive" src="'.base_url($image).'" alt="" /><div class="pro-grid"><span class="buy-in">Compra ahora</span></div>
 							    </a>';	
 							echo '</div>';
 

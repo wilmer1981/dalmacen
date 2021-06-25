@@ -16,7 +16,7 @@
             //echo "SUB:".$sub1;
 			if($id==$idcat){ 
           //echo $idcat."--";  
-              echo '<li><a class="color1" href="'.base_url('productos/catalogo/'.$url1).'">'.$des.'</a>';              
+              echo '<li><a class="color1" href="'.base_url('productos/'.$url1).'">'.$des.'</a>';              
                 echo '<div class="mepanel">';
                   echo '<div class="row">';
                       foreach($subcategorias as $sub){
@@ -38,7 +38,7 @@
                           if($idcat==$idcat1){  
                                 echo '<div class="col3">';
                                   echo '<div class="h_nav">';
-                                  echo '<h5><a href="'.base_url('productos/catalogo/'.$url).'">'.$subdes.'</a></h5>';
+                                  echo '<h5><a href="'.base_url('productos/'.$url).'">'.$subdes.'</a></h5>';
                                       echo '<ul>';
                                       foreach($subcategorias as $sub){  
                                         $subid2  = $sub->id; // id zapato = 16
@@ -59,7 +59,7 @@
 
                                        // echo "   ".$catid .'/'.$idcat2.'--'; 
                                         if($catid ==$idcat2){
-                                          echo '<li><a href="'.base_url('productos/catalogo/'.$url).'">'.$subdes.'</a></li>'; 
+                                          echo '<li><a href="'.base_url('productos/'.$url).'">'.$subdes.'</a></li>'; 
                                         }                                
                                       }
                                       echo '</ul>';
@@ -70,7 +70,7 @@
                   echo '</div>';
                 echo '</div>'; 
       }else{         
-        echo '<li><a class="color1" href="'.base_url('productos/catalogo/'.$url1).'">'.$des.'</a></li>';          
+        echo '<li><a class="color1" href="'.base_url('productos/'.$url1).'">'.$des.'</a></li>';          
       }
     }				                    
 	?> 	  
