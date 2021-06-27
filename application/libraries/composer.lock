@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6dfab0f707ccc905377e56556a614762",
+    "content-hash": "57efbd65676f890e78ddda6e276a090d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -804,7 +804,7 @@
         },
         {
             "name": "mercadopago/dx-php",
-            "version": "2.3.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mercadopago/sdk-php.git",
@@ -831,6 +831,7 @@
                 "symfony/yaml": "~2.5",
                 "vlucas/phpdotenv": "^2.5"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -907,7 +908,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mercadopago/dx-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

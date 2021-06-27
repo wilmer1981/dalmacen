@@ -825,8 +825,8 @@
         },
         {
             "name": "mercadopago/dx-php",
-            "version": "2.3.0",
-            "version_normalized": "2.3.0.0",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mercadopago/sdk-php.git",
@@ -854,8 +854,9 @@
                 "vlucas/phpdotenv": "^2.5"
             },
             "time": "2021-05-19T21:01:47+00:00",
+            "default-branch": true,
             "type": "library",
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "MercadoPago\\": [
