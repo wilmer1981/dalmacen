@@ -11,6 +11,7 @@ $url       =  $this->uri->segment(1);
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Zapatillas, Accesorios, Ropas, Laptop, PC, Smartphone, Samsung, LG, SonyErricsson, Motorola" />	
+	<meta name="google-site-verification" content="aqFSrGw-x-e2E1NbVpDF81wx7Vvwzr0N3KBqFTdOquY" />
 	
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
