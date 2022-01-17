@@ -394,6 +394,7 @@ class Productos extends CI_Controller {
 	public function categorias(){
 		
 		$idcat = $this->uri->segment(3);
+       // echo "IDCAT";
 		if(empty($idcat)){
 			$this->data['categorias'] = $this->categorias_model->getCategorias('','','c.id_categoria=0','','');
 		}else{

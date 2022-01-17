@@ -1,4 +1,4 @@
-   <?php 
+ <?php 
 //$creditos  =$estadistica_ventas->total_credito; 
 //$contados   =$estadistica_ventas->total_contado; 
 //$totales    =$estadistica_ventas->total_ventas; 

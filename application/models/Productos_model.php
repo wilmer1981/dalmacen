@@ -305,7 +305,7 @@ class Productos_model extends CI_Model {
       	return $results;  */
     }  
 
-     public function sp_getCategoriasList($opcion,$id,$one=false,$array='array'){
+    public function sp_getCategoriasList($opcion,$id,$one=false,$array='array'){
 		
 		if($opcion=="subcategoria"){
 			$where='c.id_categoria="'.$id.'" AND c.estado=1';	
@@ -546,7 +546,7 @@ class Productos_model extends CI_Model {
  
     }
 	
-	 public function sp_getProductoImages($where='',$one=false,$array='array'){	
+	public function sp_getProductoImages($where='',$one=false,$array='array'){	
       	$this->db->select('i.*');
      	$this->db->from('wsoft_productos p');
      	$this->db->join('wsoft_productos_images i', 'i.id_producto = p.id', 'inner');

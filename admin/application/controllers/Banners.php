@@ -120,6 +120,8 @@ class Banners extends CI_Controller {
                 $this->data['custom_error'] = '<div class="form_error"><p>Ha ocurrido un error.</p></div>';
             }
         }	
+
+        
 		$this->data['artstatus']    = $this->generales_model->get('wsoft_estados','','','','');
         $this->data['categorias']   = $this->generales_model->get('wsoft_categorias','','','','');		
 	

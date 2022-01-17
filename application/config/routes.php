@@ -74,6 +74,6 @@ $route['catalogo/productos/pagina'] = 'catalogo/productos';//cuando sea la prime
 
 
 $route['productos/(:any)'] = "productos/catalogo/$1";
-$route['producto/(:any)'] = "productos/preview/$1";
+$route['producto/(:any)']  = "productos/preview/$1";
 
 $route['notifications'] = 'shopping/notificacionesMercadoPago';

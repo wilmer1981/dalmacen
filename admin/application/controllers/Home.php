@@ -30,11 +30,9 @@ class Home extends CI_Controller {
           redirect('home/login');      
         }else{	
 		
-			$fecha_actual = date("Y-m-d");   
-
+			$fecha_actual = date("Y-m-d"); 
 			$this->data['counter']    = get_counter();
-			//var_dump($this->data['counter']);
-		  		 
+			//var_dump($this->data['counter']);		  		 
 			$this->data['header']      = 'home/header';
 			$this->data['breadcrumbs'] = 'home/breadcrumbs';
 			$this->data['footer']      = 'home/footer';
@@ -42,7 +40,6 @@ class Home extends CI_Controller {
           
 			$this->data['menuPanel']   = 'Panel';
 			$this->data['view']        = 'home/panel';
-
 			$this->load->view('layout/template',  $this->data);  
         }     
     }

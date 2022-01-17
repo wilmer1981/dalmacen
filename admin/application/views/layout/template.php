@@ -113,22 +113,22 @@ $url_img = $this->session->userdata('imagen');
 
       <div class="main-content">
         <div class="main-content-inner">
-			<?php if(isset($breadcrumbs)){ $this->load->view($breadcrumbs); } ?>
-		    <section class="content spacing-top">    
-            <?php if($this->session->flashdata('error') != null){?>
-                <div class="alert alert-danger">
-                  <button type="button" class="close" data-dismiss="alert">&times;</button>
-                  <?php echo $this->session->flashdata('error');?>
-               </div>
-            <?php }?>
-            <?php if($this->session->flashdata('success') != null){?>
-                <div class="alert alert-success">
-                  <button type="button" class="close" data-dismiss="alert">&times;</button>
-                  <?php echo $this->session->flashdata('success');?>
-               </div>
-            <?php }?>
-			</section>
-			<?php if(isset($view)){ $this->load->view($view); } ?>
+			    <?php if(isset($breadcrumbs)){ $this->load->view($breadcrumbs); } ?>
+  		    <section class="content spacing-top">    
+              <?php if($this->session->flashdata('error') != null){?>
+                  <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <?php echo $this->session->flashdata('error');?>
+                 </div>
+              <?php }?>
+              <?php if($this->session->flashdata('success') != null){?>
+                  <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <?php echo $this->session->flashdata('success');?>
+                 </div>
+              <?php }?>
+  			  </section>
+			    <?php if(isset($view)){ $this->load->view($view); } ?>
         </div>
 
       </div><!-- /.main-content -->
@@ -136,7 +136,6 @@ $url_img = $this->session->userdata('imagen');
       <div class="footer">
          <?php if(isset($footer)){ $this->load->view($footer); } ?>
       </div>
-
       <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
         <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
       </a>
@@ -144,10 +143,8 @@ $url_img = $this->session->userdata('imagen');
     </div><!-- /.main-container -->
 
     <!-- basic scripts -->
-
     <!--[if !IE]> -->
     <script src="<?php echo base_url('assets/js/jquery-2.1.4.min.js')?>"></script>
-
     <!-- <![endif]-->
 
     <!--[if IE]>
@@ -197,8 +194,7 @@ $url_img = $this->session->userdata('imagen');
 	-->
 	
 	<script src="<?php echo base_url('assets/plugins/sweetalert2/sweetalert.min.js');?>"></script>
-
-    <script src="<?php echo base_url('assets/js/jquery.functions.js')?>"></script>
+  <script src="<?php echo base_url('assets/js/jquery.functions.js')?>"></script>
 
   
 </body>

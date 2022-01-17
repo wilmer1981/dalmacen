@@ -42,11 +42,9 @@ class Productos extends CI_Controller {
 		$this->load->view('footer');
     }
 
-    public function catalogo(){
+   public function catalogo(){
     	$url       =  $this->uri->segment(2);
-		//echo "URL : ".$url."<br>"; 
-
-    	$categoria = $this->generales_model->get('wsoft_categorias','','url="'.$url.'"','','');
+	  	$categoria = $this->generales_model->get('wsoft_categorias','','url="'.$url.'"','','');
 		//var_dump($categoria);
 
 		if(!empty($categoria)){			
@@ -162,14 +160,14 @@ class Productos extends CI_Controller {
 
 		$this->data['header']		= 'home/header';        	
 		$this->data['slider']		= 'home/slider';
-        $this->data['view']			= 'productos/productos_catalogo';
+        $this->data['view']	   = 'productos/productos_catalogo';
         $this->data['footer']		= 'home/footer';
 		$this->data['featuresmod']	= 'home/features';	
 		$this->data['latestsmod']	= 'home/latest';	
        
         $this->load->view('layout/layout',  $this->data);	
 
-    }
+   }
 
 	public function preview(){	
 		$url       =  $this->uri->segment(2); 	
@@ -206,7 +204,7 @@ class Productos extends CI_Controller {
 		$this->data['latestsmod']	= 'home/latest';	
        
         $this->load->view('layout/layout', $this->data);		
-    }
+   }
 
     public function subcategoria(){
 		//$id = $this->input->post('id');

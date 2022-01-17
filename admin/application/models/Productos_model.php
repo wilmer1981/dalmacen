@@ -18,7 +18,7 @@ class Productos_model extends CI_Model {
         
         $this->db->select('p.*, c.titulo as categoria, c.id_categoria as idcatpadre');
         $this->db->from('wsoft_productos p');
-        $this->db->join('wsoft_categorias c', 'c.id = p.id_subcategoria', 'inner');
+        $this->db->join('wsoft_categorias c', 'c.id = p.id_subcategoria', 'left');
 		if($where){
             $this->db->where($where);
         }

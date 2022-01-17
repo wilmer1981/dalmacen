@@ -40,7 +40,7 @@
 								echo '<li data-thumb="'.base_url($image).'"><img src="'.base_url($image).'"></li>';
 							}
 						}else{
-							$img = $producto[0]->url_imagen;
+							$img    = $producto[0]->url_imagen;
 							$image   ='admin/'.$img;
 							echo '<li data-thumb="'.base_url($image).'"><img src="'.base_url($image).'"></li>';
 						}						

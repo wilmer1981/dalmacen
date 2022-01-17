@@ -457,6 +457,7 @@ select.select_item {
 .col-sm-3.hidden-xs.column-right {
   padding-left: 20px;
 }
+
 .left-sidebar-widget ul > li {
   overflow: hidden;
   list-style: none;
@@ -473,7 +474,8 @@ select.select_item {
   padding-left: 25px;
 }
 
-.column-left .columnblock-title, .column-right .columnblock-title {
+.column-left .columnblock-title, 
+.column-right .columnblock-title {
   font-size: 20px;
   font-family: Montserrat;
   color: #000;
@@ -2839,7 +2841,6 @@ ul.qty li p{
 
 
 /* USER PROFILE PAGE */
-
 .login-signup {
   padding: 0 0 25px;
 }
@@ -4300,4 +4301,6 @@ a.cpns{
 .resumen label{
     font-weight: 400;
 }
+
+
 

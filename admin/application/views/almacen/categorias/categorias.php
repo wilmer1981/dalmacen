@@ -1,6 +1,5 @@
 <?php
-	$idcat = $this->uri->segment(3);
-	
+	$idcat = $this->uri->segment(3);	
 ?>
 
 <div class="page-content">

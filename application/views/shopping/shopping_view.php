@@ -145,7 +145,7 @@ $cart = $this->cart->contents();
 			    </div>
 			</div>
 			<?php $i++; } ?>
-				</div>
+		</div>
 		<div class="col-md-3 cart-total">
 			<a class="continue" href="<?php echo base_url(); ?>">SEGUIR COMPRANDO</a>
 			 <!--<h1>RESUMEN DE TU PEDIDO</h1>-->
@@ -179,10 +179,8 @@ $cart = $this->cart->contents();
 				 <p><a href="#">Iniciciar sesión</a> usar cuentas - cupones vinculados</p>
 			 </div>
 			-->
-		</div>
-		
+		</div>		
 		<div class="clearfix"> </div>
-
 		<?php echo form_close(); ?>
 	</div>
 
